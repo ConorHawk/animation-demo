@@ -1,29 +1,26 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+  <div id="app" class="antialiased font-sans leading-normal text-grey-darkest">
+    <div id="nav" class="fixed w-full bg-white z-50">
+      <div class="container mx-auto p-4 flex justify-between">
+        <div>
+          <h1 class="text-orange text-xl">LOGO</h1>
+        </div>
+        <div>
+          <router-link class="text-orange-dark text-sm uppercase tracking-wide mx-3 no-underline" to="/">Home</router-link>
+          <router-link class="text-orange-dark text-sm uppercase tracking-wide mx-3 no-underline" to="/about">About</router-link>
+        </div>
+      </div>
     </div>
     <router-view/>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+<script>
+  import '@/assets/styles/main.scss'
+  export default {
   }
-}
+</script>
+
+<style lang="scss">
+  html {overflow-y:scroll}
 </style>
